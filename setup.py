@@ -32,7 +32,7 @@ if __name__ == "__main__":
     extra_link = [ '-L/usr/local/lib64'  ,'-lrdmacm', '-libverbs'],
     extra_compile_args={
             'cxx': [
-                '-O3', '-fPIC', 
+                '-O0', '-g', '-fPIC', 
                 f'-I{__PS_PATH__}/include', 
                 f'-D_GLIBCXX_USE_CXX11_ABI={str(int(torch_cxx11_abi))}',
                 '-DDMLC_USE_ZMQ',
