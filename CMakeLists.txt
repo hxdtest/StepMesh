@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.22 FATAL_ERROR)
 project(af LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fPIC -O3 -Wall -finline-functions  -msse2 ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fPIC -O0 -g -Wall -finline-functions  -msse2 ")
 
 # import pytorch library
 find_package (Python COMPONENTS Interpreter Development)
