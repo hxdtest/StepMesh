@@ -7,6 +7,15 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fPIC -O3 -Wall -finline-func
 
 # import pytorch library
 find_package (Python COMPONENTS Interpreter Development)
+
+
+set(Python_EXECUTABLE "/opt/conda/bin/python3")
+    # 手动指定路径
+set(Python_EXECUTABLE "/opt/conda/bin/python3")
+set(Python_INCLUDE_DIR "/opt/conda/include/python3.10")    
+set(Python_LIBRARY "/opt/conda/lib/libpython3.10.a") 
+
+
 execute_process(COMMAND ${Python_EXECUTABLE}
         -c "import torch; print(torch.utils.cmake_prefix_path)"
         OUTPUT_VARIABLE PYTORCH_CMAKE_PREFIX_PATH OUTPUT_STRIP_TRAILING_WHITESPACE)
