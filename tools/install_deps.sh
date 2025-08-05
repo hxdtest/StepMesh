@@ -1,5 +1,3 @@
-sudo apt install -y build-essential libtool autoconf automake libnuma-dev unzip pkg-config librdmacm-dev rdma-core make cmake python3-pip
-
 THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/../ &> /dev/null && pwd )"
 
 rm -rf zeromq-4.1.4.tar.gz zeromq-4.1.4
