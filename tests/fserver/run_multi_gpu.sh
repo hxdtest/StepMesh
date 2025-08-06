@@ -10,7 +10,7 @@ trap cleanup EXIT
 
 export BIN=${BIN:-test_fserver}
 # common setup
-export DMLC_INTERFACE=${RNIC:-brainpf_bond0}
+export DMLC_INTERFACE=${RNIC:-bond0}
 export SCHEDULER_IP=$(ip -o -4 addr | grep ${DMLC_INTERFACE} | awk '{print $4}' | cut -d'/' -f1)
 export DMLC_NUM_WORKER=${NUM_WORKER:-1}
 export DMLC_NUM_SERVER=${NUM_SERVER:-1}
