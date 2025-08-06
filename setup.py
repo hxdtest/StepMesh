@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     torch_cxx11_abi = torch.compiled_with_cxx11_abi()
     use_cuda = os.environ.get("USE_CUDA",'1')=='1'
-    extra_link = [ '-L/usr/local/lib64'  ,'-lrdmacm', '-libverbs'],
+    extra_link = [ '-L/usr/local/lib64'  ,'-lrdmacm', '-libverbs']
     extra_compile_args={
             'cxx': [
                 '-O0', '-g', '-fPIC', 
